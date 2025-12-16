@@ -2,7 +2,7 @@
 
 python -m venv .venv
 
-.venv\Scripts\Activate.ps1
+source .venv/bin/activate
 
 pip install -r requirements.txt
 
@@ -42,13 +42,15 @@ python -m venv .venv
 
 ### Optional
 
+source .venv/bin/activate
+
 python -m pip install --upgrade pip
 
 pip install -r requirements.txt
 
 ### step 4 - Run
 
-python  main.py
+python main.py
 
 ### step 4(Optional) - Run with gunicorn
 gunicorn --bind 0.0.0.0:5000 main:app
