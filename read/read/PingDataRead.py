@@ -1,9 +1,9 @@
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-DATA_DIR = BASE_DIR / "data/ping"
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+DATA_DIR = BASE_DIR /"data/ping"
 
-def fetch_ping_data():
+def read_ping_data():
     contents = []
     try:
         if not BASE_DIR.exists() or not DATA_DIR.is_dir():
@@ -23,7 +23,6 @@ def fetch_ping_data():
                 
     except Exception as e:
         print(f"Data fetch failed: {e}") 
-    
-    
-    return contents[0][0]
+
+    return contents
             

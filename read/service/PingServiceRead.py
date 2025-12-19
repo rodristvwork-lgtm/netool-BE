@@ -1,0 +1,1 @@
+# TODO return single or list of Ping domain, methods or 

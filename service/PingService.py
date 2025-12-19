@@ -1,1 +1,1 @@
-# TODO 
+# TODO Here we apply an logic of facade mapper and export data to API layer
