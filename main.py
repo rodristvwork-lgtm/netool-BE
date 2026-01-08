@@ -1,14 +1,15 @@
 from flask import Flask, jsonify
 from domain.model.Ping import Ping
 from read.read.PingDataRead import read_ping_data
+from read.service.PingServiceRead import findAllPingResults
 
 app = Flask(__name__)
 
 @app.route('/')
 def hello():
     
-    data = read_ping_data()
-    print(data)
+    data = findAllPingResults()
+    print(data)          
     ping_responde = Ping(seconds=300, byte=1500, server="Ebay")
     return jsonify(ping_responde.__dict__)
 

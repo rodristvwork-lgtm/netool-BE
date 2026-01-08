@@ -30,7 +30,7 @@ docker build -t netool-be-image:1.0 .
     
 ### step 2 - create container with mounted directory (using this net-performance-collectors directory)
 
-docker run -it --name netool-be-image-container -p 5000:5000 -v "$(Get-Location):/app" netool-be-image:1.0 bash
+docker run -it --name netool-be-image-container -p 5000:5000 -p 5678:5678 -v "$(Get-Location):/app" netool-be-image:1.0 bash
 
 exit
 

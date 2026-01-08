@@ -24,8 +24,9 @@ COPY requirements.txt .
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt || true
 
-# Expose port
+# Expose ports
 EXPOSE 5000
+EXPOSE 5678
 
 # Default command: start bash shell
 CMD ["/bin/bash"]
