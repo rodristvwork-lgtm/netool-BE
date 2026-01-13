@@ -57,3 +57,20 @@ gunicorn --bind 0.0.0.0:5000 main:app
 
 #### Port
 http://localhost:5000
+
+
+## Docker Debug
+
+### step 1 - activate environment
+source .venv/bin/activate
+
+### step 2 - launch debug command line
+python -m debugpy --listen 0.0.0.0:5678 --wait-for-client main.py
+
+### step 3 - Enable Debugger - launch.json
+
+### step 4 - Open Browser and reload
+
+http://localhost:5000
+
+
